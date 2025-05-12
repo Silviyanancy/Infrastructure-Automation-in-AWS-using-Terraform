@@ -5,6 +5,7 @@
 crash.log
 *.tfvars
 .terraform.tfstate.lock.info
+.terraform.lock.hcl
 
 # Editors
 .vscode/
