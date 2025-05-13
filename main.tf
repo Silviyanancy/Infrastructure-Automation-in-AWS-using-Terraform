@@ -55,3 +55,8 @@ resource "aws_instance" "webserver" {
     Name = "WebServer Instance"
   }
 }
+
+#S3 bucket creation
+resource "aws_s3_bucket" "sample_bucket" {
+  #created a bucket with default available name
+}
