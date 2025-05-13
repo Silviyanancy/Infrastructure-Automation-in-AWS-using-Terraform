@@ -45,3 +45,13 @@ resource "aws_subnet" "demo-subnet" {
   vpc_id     = aws_vpc.demo-vpc.id
   cidr_block = "10.0.1.0/24"
 }
+
+#EC2 Instance Provision
+resource "aws_instance" "webserver" {
+  ami           = var.ami
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "WebServer Instance"
+  }
+}
