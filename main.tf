@@ -31,3 +31,17 @@ resource "aws_iam_user_policy_attachment" "admin-access" {
   policy_arn = aws_iam_policy.admin-user.arn
 
 }
+#VPC creation
+resource "aws_vpc" "demo-vpc" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "demo-vpc"
+  }
+}
+
+#Subnet Creation
+resource "aws_subnet" "demo-subnet" {
+  vpc_id     = aws_vpc.demo-vpc.id
+  cidr_block = "10.0.1.0/24"
+}
