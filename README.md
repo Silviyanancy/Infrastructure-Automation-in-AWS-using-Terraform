@@ -36,6 +36,7 @@ Update variables.tf or create a terraform.tfvars file to set required values (e.
    terraform apply # Deploy resources
    ```
 **Components**
+
 **IAM Configuration**
 - Creates IAM users/policies with least-privilege access.
 
