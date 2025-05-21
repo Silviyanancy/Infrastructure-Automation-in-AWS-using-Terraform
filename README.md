@@ -1,4 +1,4 @@
-# TerraformWithAWS
+# Infrastructure Automation in AWS using Terraform
 
 A Terraform project to provision core AWS infrastructure components including IAM, VPC, EC2, and S3.
 
@@ -44,4 +44,10 @@ Update variables.tf or create a terraform.tfvars file to set required values (e.
 - Sets up a VPC with public/private subnets (add vpc.tf if not present).
 - Includes route tables and internet gateway configurations.
 
+**EC2 Instance**
+- Provisions an EC2 instance using variables from variables.tf (e.g., instance_type, ami_id).
+- Security groups and key pairs are configured in main.tf.
 
+**S3 Bucket**
+- Creates a private S3 bucket with encryption enabled.
+- Configured in main.tf.
