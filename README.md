@@ -20,8 +20,8 @@ This project automates the provisioning of AWS resources using Terraform. It inc
 ## Getting Started
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/TerraformWithAWS.git
-   cd TerraformWithAWS
+   git clone <repo>
+   cd <repo>
    ```
 2. **Initialize Terraform:**
    ```bash
