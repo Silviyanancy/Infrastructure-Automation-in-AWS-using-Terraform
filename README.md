@@ -2,22 +2,7 @@
 
 A Terraform project to provision core AWS infrastructure components including IAM, VPC, EC2, and S3.
 
-## Table of Contents
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Components](#components)
-  - [IAM Configuration](#iam-configuration)
-  - [VPC and Subnet](#vpc-and-subnet)
-  - [EC2 Instance](#ec2-instance)
-  - [S3 Bucket](#s3-bucket)
-- [Variables](#variables)
-- [Usage](#usage)
-- [Cleanup](#cleanup)
-
 ---
-
 ## Overview
 This project automates the provisioning of AWS resources using Terraform. It includes:
 - IAM user/policy creation
@@ -42,5 +27,21 @@ This project automates the provisioning of AWS resources using Terraform. It inc
    ```bash
    terraform init
    ```
-3.** Review variables:**
+3. **Review variables:**
 Update variables.tf or create a terraform.tfvars file to set required values (e.g., AWS region, instance type).
+
+4. **Apply configuration:**
+   ```bash
+   terraform plan  # Preview changes
+   terraform apply # Deploy resources
+   ```
+**Components**
+**IAM Configuration**
+- Creates IAM users/policies with least-privilege access.
+- Defined in provider.tf and supporting modules.
+
+**VPC and Subnet**
+- Sets up a VPC with public/private subnets (add vpc.tf if not present).
+- Includes route tables and internet gateway configurations.
+
+
