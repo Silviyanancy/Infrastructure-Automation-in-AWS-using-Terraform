@@ -38,4 +38,9 @@ This project automates the provisioning of AWS resources using Terraform. It inc
    git clone https://github.com/your-repo/TerraformWithAWS.git
    cd TerraformWithAWS
    ```
-
+2. **Initialize Terraform:**
+   ```bash
+   terraform init
+   ```
+3.** Review variables:**
+Update variables.tf or create a terraform.tfvars file to set required values (e.g., AWS region, instance type).
