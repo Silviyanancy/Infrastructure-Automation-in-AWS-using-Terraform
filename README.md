@@ -38,16 +38,16 @@ Update variables.tf or create a terraform.tfvars file to set required values (e.
 **Components**
 **IAM Configuration**
 - Creates IAM users/policies with least-privilege access.
-- Defined in provider.tf and supporting modules.
 
 **VPC and Subnet**
-- Sets up a VPC with public/private subnets (add vpc.tf if not present).
-- Includes route tables and internet gateway configurations.
+- Sets up a VPC with public/private subnets.
 
 **EC2 Instance**
 - Provisions an EC2 instance using variables from variables.tf (e.g., instance_type, ami_id).
-- Security groups and key pairs are configured in main.tf.
 
 **S3 Bucket**
 - Creates a private S3 bucket with encryption enabled.
-- Configured in main.tf.
+
+**Cleanup**
+- Run terraform destroy to remove all provisioned resources.
+- Delete local Terraform state files (if any).
